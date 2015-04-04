@@ -1,0 +1,22 @@
+﻿<Window x:Class="SymbolPlacing.CharacteristicsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Title="CharacteristicsWindow" Height="300" Width="300" MinHeight="300" MinWidth="300" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="180" />
+        </Grid.ColumnDefinitions>
+        <RadioButton GroupName="Characteristics" Name="NotDefinedRadioButton" Content="Не задано" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="RadioButtonChecked"/>
+        <RadioButton GroupName="Characteristics" Name="ConnectedRadioButton" Content="Подключен" Grid.Column="1" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Checked="RadioButtonChecked"/>
+        <RadioButton GroupName="Characteristics" Name="DisabledRadioButton" Content="Отключен программно" Grid.Column="1" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Checked="RadioButtonChecked"/>
+        <RadioButton GroupName="Characteristics" Name="ErrorRadioButton" Content="Ошибка" Grid.Column="1" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Checked="RadioButtonChecked"/>
+        <Button Content="Закрыть" Name="CloseButton" Grid.Column="1" Height="25" Width="60"  Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="CloseButton_Click" />
+        <ListBox Name="SymbolsListBox" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" SelectionChanged="SymbolsListBox_SelectionChanged"/>
+    </Grid>
+</Window>
