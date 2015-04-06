@@ -47,7 +47,7 @@ namespace SymbolPlacing
                                 x = sheet.MoveRight(x, symbol.Margins.Left);
                                 double y = sheet.MoveDown(top, symbol.Margins.Top);
                                 symbol.Place(sheetId, x, y);
-                                symbol.SetCharacteristic(0);
+                                //symbol.SetCharacteristic(0);
                                 x = sheet.MoveRight(x, symbol.Margins.Right);
                             }
                             SetSymbolsCharacteristic(project, symbols);
